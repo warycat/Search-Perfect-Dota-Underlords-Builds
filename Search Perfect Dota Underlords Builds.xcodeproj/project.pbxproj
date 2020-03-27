@@ -13,6 +13,8 @@
 		744144E024257BC300408AE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 744144DF24257BC300408AE5 /* Assets.xcassets */; };
 		744144E324257BC300408AE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 744144E224257BC300408AE5 /* Preview Assets.xcassets */; };
 		744144E624257BC300408AE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744144E424257BC300408AE5 /* LaunchScreen.storyboard */; };
+		744144F12428AEC400408AE5 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 744144F02428AEAC00408AE5 /* libresolv.tbd */; };
+		744144F824294FA000408AE5 /* libdota_underlords.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 744144F62428B55200408AE5 /* libdota_underlords.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		744144E224257BC300408AE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		744144E524257BC300408AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		744144E724257BC300408AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		744144F02428AEAC00408AE5 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		744144F22428AF9000408AE5 /* dota_underlords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dota_underlords.h; path = ../../../dota_underlords/src/dota_underlords.h; sourceTree = "<group>"; };
+		744144F32428B01700408AE5 /* Dota-Underlords-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dota-Underlords-Bridging-Header.h"; sourceTree = "<group>"; };
+		744144F62428B55200408AE5 /* libdota_underlords.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdota_underlords.a; path = ../../dota_underlords/target/universal/release/libdota_underlords.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				744144F12428AEC400408AE5 /* libresolv.tbd in Frameworks */,
+				744144F824294FA000408AE5 /* libdota_underlords.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,7 @@
 			children = (
 				744144D824257BC100408AE5 /* Search Perfect Dota Underlords Builds */,
 				744144D724257BC100408AE5 /* Products */,
+				744144EF2428AEAC00408AE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +65,7 @@
 		744144D824257BC100408AE5 /* Search Perfect Dota Underlords Builds */ = {
 			isa = PBXGroup;
 			children = (
+				744144F22428AF9000408AE5 /* dota_underlords.h */,
 				744144D924257BC100408AE5 /* AppDelegate.swift */,
 				744144DB24257BC100408AE5 /* SceneDelegate.swift */,
 				744144DD24257BC100408AE5 /* ContentView.swift */,
@@ -63,6 +73,7 @@
 				744144E424257BC300408AE5 /* LaunchScreen.storyboard */,
 				744144E724257BC300408AE5 /* Info.plist */,
 				744144E124257BC300408AE5 /* Preview Content */,
+				744144F32428B01700408AE5 /* Dota-Underlords-Bridging-Header.h */,
 			);
 			path = "Search Perfect Dota Underlords Builds";
 			sourceTree = "<group>";
@@ -73,6 +84,15 @@
 				744144E224257BC300408AE5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		744144EF2428AEAC00408AE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				744144F62428B55200408AE5 /* libdota_underlords.a */,
+				744144F02428AEAC00408AE5 /* libresolv.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,14 +306,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Search Perfect Dota Underlords Builds/Preview Content\"";
+				DEVELOPMENT_TEAM = A8Q26LR93F;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Search Perfect Dota Underlords Builds/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = /Users/yinchu/Documents/dota_underlords/target/universal/release;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rustgym.Search-Perfect-Dota-Underlords-Builds";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yinchu/Documents/ios/Search Perfect Dota Underlords Builds/Search Perfect Dota Underlords Builds/Dota-Underlords-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,14 +329,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Search Perfect Dota Underlords Builds/Preview Content\"";
+				DEVELOPMENT_TEAM = A8Q26LR93F;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Search Perfect Dota Underlords Builds/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = /Users/yinchu/Documents/dota_underlords/target/universal/release;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rustgym.Search-Perfect-Dota-Underlords-Builds";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yinchu/Documents/ios/Search Perfect Dota Underlords Builds/Search Perfect Dota Underlords Builds/Dota-Underlords-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
